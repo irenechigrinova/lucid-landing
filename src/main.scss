@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&family=Source+Code+Pro:wght@600&display=swap');
+
+@import "styles/normalize";
+@import "styles/vars";
+
+@import "styles/about";
+@import "styles/start";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Epilogue', sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, p {
+  margin: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
