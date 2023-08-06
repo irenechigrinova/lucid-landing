@@ -137,7 +137,7 @@ export default () => {
           "opacity 400ms";
         document.querySelector("#center .lines").style.opacity = "0";
         document.querySelector("#center").style.transform = `scale(${
-          window.innerWidth < 612 || window.innerWidth > 2008 ? "24" : "15"
+          window.innerWidth < 612 || window.innerWidth > 2008 ? "26" : "15"
         })`;
       }, 2000);
     },

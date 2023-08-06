@@ -46,9 +46,26 @@
   }
 
   .icons {
-    position: absolute;
+    position: fixed;
+    width: fit-content;
+    max-width: 35%;
+    height: 100%;
     right: 0;
-    bottom: -5px;
-    z-index: 1;
+    bottom: 0;
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+
+    .big {
+      position: absolute;
+      left: 0;
+      top: 40%;
+      width: auto;
+      height: 30%;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform-style: preserve-3d;
+    }
   }
 }
