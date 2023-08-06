@@ -5,6 +5,7 @@
 
 @import "styles/about";
 @import "styles/start";
+@import "styles/decentralization";
 
 html,
 body {
@@ -18,6 +19,7 @@ body {
 
 body {
   position: relative;
+  background: $black;
 }
 
 * {
@@ -45,4 +47,15 @@ section {
   width:1px;
   height:1px;
   overflow:hidden;
+}
+
+.container {
+  max-width: 90vw;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
 }

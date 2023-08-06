@@ -1,13 +1,15 @@
 #start {
   background: $black;
   overflow: hidden;
-  z-index: 9;
+  z-index: 1;
 
   .items {
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
 
     svg {
       width: 100vw;

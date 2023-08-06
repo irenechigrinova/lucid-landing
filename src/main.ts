@@ -1,8 +1,8 @@
 import { gsap } from "gsap";
 import { TextPlugin, EasePack, CSSPlugin, CustomEase } from "gsap/all";
 
-import runAbout from "./scripts/about";
 import runStart from "./scripts/start";
+import runDecentralization from "./scripts/decentralization";
 
 import "./main.scss";
 
@@ -11,5 +11,7 @@ gsap.registerPlugin(...plugins);
 
 const masterTL = gsap.timeline();
 
-//masterTL.add(runAbout());
+masterTL.set("main", { opacity: 1 });
+
 masterTL.add(runStart());
+masterTL.add(runDecentralization());
