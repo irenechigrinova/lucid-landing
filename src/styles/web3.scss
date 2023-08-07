@@ -1,0 +1,73 @@
+#web3 {
+  z-index: 3;
+  opacity: 0;
+
+  .container {
+    margin-top: 120px;
+    height: calc(100vh - 120px);
+
+
+    div {
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+
+      &:first-of-type {
+        justify-content: flex-start;
+
+        p {
+          font-weight: 300;
+          font-size: 1.5vw;
+          color: $white;
+
+          @media screen and (max-width: 700px) {
+            font-size: 4.5vw;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        top: 2vw;
+        justify-content: flex-end;
+
+        p {
+          font-weight: 300;
+          font-size: 1vw;
+          color: $white;
+          margin: 1vw 0;
+
+          @media screen and (max-width: 700px) {
+            font-size: 3vw;
+          }
+        }
+      }
+
+      &:last-of-type {
+        justify-content: flex-end;
+      }
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 3vw;
+      text-transform: uppercase;
+      color: $yellow;
+
+      @media screen and (max-width: 700px) {
+        font-size: 6vw;
+      }
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 2.2vw;
+      text-transform: uppercase;
+      color: $yellow;
+
+      @media screen and (max-width: 700px) {
+        font-size: 5.2vw;
+      }
+    }
+  }
+}

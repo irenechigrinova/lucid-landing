@@ -1,6 +1,9 @@
 import { gsap } from "gsap";
 
-export default () => {
+export default (state) => {
+  state.isAnimated = true;
+  state.currentSlide = 1;
+
   const mainSvgTL = gsap.timeline();
   const itemsTL = gsap.timeline();
 
@@ -139,9 +142,9 @@ export default () => {
         document.querySelector("#center").style.transform = `scale(${
           window.innerWidth < 612 || window.innerWidth > 2008 ? "26" : "15"
         })`;
-      }, 2000);
+      }, 1000);
     },
   });
 
-  return itemsTL;
+  return mainSvgTL;
 };

@@ -8,16 +8,6 @@
   </head>
   <body>
     <main style="opacity: 0">
-      <section id="about">
-        <div class="wrapper">
-          <h1 class="code">
-            <span class="text"></span>
-            <span class="cursor">_</span>
-            <span class='gsap'>GSAP</span>
-            <span class="sr-only">Made with gsap</span>
-          </h1>
-        </div>
-      </section>
       <section id="start">
         <div class="items">
           <svg width="1201" height="505" viewBox="0 0 1201 505" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -551,18 +541,90 @@
               </defs>
             </svg>
             <div class="big">
-              <svg width="2481" height="2770" viewBox="0 0 2481 2770" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" class="svg-group-big-item">
-                <path d="M2481 1963.52C2481 2044.68 2437.32 2119.68 2366.41 2160.26L1355.1 2739.04C1284.19 2779.63 1196.83 2779.63 1125.92 2739.04L114.615 2160.26C43.706 2119.68 0.0238923 2044.68 0.0238947 1963.52L0.0241118 805.961C0.0241142 724.797 43.7059 649.798 114.615 609.216L1125.92 30.4365C1196.83 -10.1456 1284.19 -10.1456 1355.1 30.4365L2366.41 609.216C2437.32 649.798 2481 724.797 2481 805.961L2481 1963.52Z" fill="black"></path>
-                <mask id="mask0_652_247" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="2481" height="2770">
-                  <path d="M2480.98 1963.52C2480.98 2044.68 2437.29 2119.68 2366.39 2160.26L1355.08 2739.04C1284.17 2779.63 1196.81 2779.63 1125.9 2739.04L114.592 2160.26C43.6826 2119.68 0.000454768 2044.68 0.000457185 1963.52L0.000674311 805.961C0.000676728 724.797 43.6825 649.798 114.592 609.216L1125.9 30.4365C1196.81 -10.1456 1284.17 -10.1456 1355.08 30.4365L2366.39 609.216C2437.29 649.798 2480.98 724.797 2480.98 805.961L2480.98 1963.52Z" fill="white"></path>
-                </mask>
-                <g mask="url(#mask0_652_247)" class="group-lines">
-                  <path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd" d="M3451.72 -262.888L3421.9 -312.264L1470.49 866.074L1569.29 806.411C1514.98 839.204 1444.46 822.026 1411.31 768.101L292.47 -1084.28L243.067 -1054.45L1361.44 797.152L1361.59 797.392C1394.33 851.898 1376.77 922.664 1322.28 955.567L-505.623 2059.33L-475.8 2108.7L1352.1 1004.94C1352.26 1004.85 1352.42 1004.75 1352.58 1004.66C1407.09 972.093 1477.71 989.652 1510.56 1044.03L2614.02 2870.94L2663.42 2841.11L1559.96 1014.2C1527.13 959.836 1544.44 889.191 1598.6 856.103L3451.72 -262.888Z" fill="#D9FF00"></path>
-                  <path d="M-750.638 248.734L-766.71 304.144L1311.7 905.938C1312.02 906.029 1312.33 906.121 1312.65 906.215C1373.28 924.321 1408.07 987.963 1390.41 1048.85L795.742 3099.03L851.166 3115.07L1445.83 1064.9C1445.91 1064.63 1445.99 1064.35 1446.07 1064.07C1464.09 1003.63 1527.36 968.817 1588.08 985.965L3639.52 1579.95L3655.59 1524.54L1604.89 930.769C1543.98 913.132 1508.79 849.699 1525.93 788.774L2128.89 -1290.02L2073.47 -1306.07L1438.62 882.628L1470.77 771.807C1453.01 833.012 1388.99 868.257 1327.77 850.531L-750.638 248.734Z" fill="#D9FF00"></path>
-                </g>
-              </svg>
-
+              <div>
+                <svg width="2481" height="2770" viewBox="0 0 2481 2770" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" class="svg-group-big-item">
+                  <path d="M2481 1963.52C2481 2044.68 2437.32 2119.68 2366.41 2160.26L1355.1 2739.04C1284.19 2779.63 1196.83 2779.63 1125.92 2739.04L114.615 2160.26C43.706 2119.68 0.0238923 2044.68 0.0238947 1963.52L0.0241118 805.961C0.0241142 724.797 43.7059 649.798 114.615 609.216L1125.92 30.4365C1196.83 -10.1456 1284.19 -10.1456 1355.1 30.4365L2366.41 609.216C2437.32 649.798 2481 724.797 2481 805.961L2481 1963.52Z" fill="black"></path>
+                  <mask id="mask0_652_247" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="2481" height="2770">
+                    <path d="M2480.98 1963.52C2480.98 2044.68 2437.29 2119.68 2366.39 2160.26L1355.08 2739.04C1284.17 2779.63 1196.81 2779.63 1125.9 2739.04L114.592 2160.26C43.6826 2119.68 0.000454768 2044.68 0.000457185 1963.52L0.000674311 805.961C0.000676728 724.797 43.6825 649.798 114.592 609.216L1125.9 30.4365C1196.81 -10.1456 1284.17 -10.1456 1355.08 30.4365L2366.39 609.216C2437.29 649.798 2480.98 724.797 2480.98 805.961L2480.98 1963.52Z" fill="white"></path>
+                  </mask>
+                  <g mask="url(#mask0_652_247)" class="group-lines">
+                    <path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd" d="M3451.72 -262.888L3421.9 -312.264L1470.49 866.074L1569.29 806.411C1514.98 839.204 1444.46 822.026 1411.31 768.101L292.47 -1084.28L243.067 -1054.45L1361.44 797.152L1361.59 797.392C1394.33 851.898 1376.77 922.664 1322.28 955.567L-505.623 2059.33L-475.8 2108.7L1352.1 1004.94C1352.26 1004.85 1352.42 1004.75 1352.58 1004.66C1407.09 972.093 1477.71 989.652 1510.56 1044.03L2614.02 2870.94L2663.42 2841.11L1559.96 1014.2C1527.13 959.836 1544.44 889.191 1598.6 856.103L3451.72 -262.888Z" fill="#D9FF00"></path>
+                    <path d="M-750.638 248.734L-766.71 304.144L1311.7 905.938C1312.02 906.029 1312.33 906.121 1312.65 906.215C1373.28 924.321 1408.07 987.963 1390.41 1048.85L795.742 3099.03L851.166 3115.07L1445.83 1064.9C1445.91 1064.63 1445.99 1064.35 1446.07 1064.07C1464.09 1003.63 1527.36 968.817 1588.08 985.965L3639.52 1579.95L3655.59 1524.54L1604.89 930.769C1543.98 913.132 1508.79 849.699 1525.93 788.774L2128.89 -1290.02L2073.47 -1306.07L1438.62 882.628L1470.77 771.807C1453.01 833.012 1388.99 868.257 1327.77 850.531L-750.638 248.734Z" fill="#D9FF00"></path>
+                  </g>
+                </svg>
+                <svg width="1669" height="1668" viewBox="0 0 1669 1668" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" class="star">
+                  <path d="M469.898 0.150462L449.032 9.39876L796.081 791.699C796.134 791.817 796.186 791.936 796.237 792.054C806.196 815.018 795.788 841.755 772.857 851.918L0.794649 1194.11L10.0492 1214.97L782.111 872.778C782.215 872.732 782.32 872.686 782.424 872.641C805.31 862.698 831.959 872.982 842.228 895.725L1184.77 1667.87L1205.64 1658.63L863.219 886.756C853.048 863.829 863.29 837.022 886.097 826.692L1668.94 479.727L1659.68 458.865L835.456 824.174L877.188 805.676C854.139 815.892 827.168 805.493 816.946 782.45L469.898 0.150462Z" fill="#D8FD01"/>
+                </svg>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="web3">
+        <div class="container">
+          <div>
+            <h2>WEB3 IS COMING</h2>
+            <p class="white">Mass adoption of crypto is inevitable.</p>
+          </div>
+          <div>
+            <h3>AND We are here to speed it up</h3>
+            <p class="white small">
+              We want to give every member of the crypto community<br /> an opportunity to support the projects they love.
+            </p>
+            <p class="white small">
+              We believe that the market will continue producing blockchains<br /> and other dTools indefinitely. And each of them will find market<br /> share and customers.
+            </p>
+            <p class="white small">
+              Like in the web 2.0 — we started with just one programming<br/> language, one framework, one browser. Look where we are today!
+            </p>
+          </div>
+          <div>
+            <h3>And all these new projects will need your support!</h3>
+          </div>
+        </div>
+      </section>
+      <section id="tools">
+        <div class="container">
+          <div>
+            <h3>We want to give you the tools<br/> to support the projects you believe in<br/> from the very first testnets to the mainnet. </h3>
+          </div>
+          <div>
+            <p class="pink">
+              Right now it’s impossible.
+            </p>
+            <p class="small white">
+              Raising nodes and participating in testnets requires specific knowledge and expertise.<br/>
+              And only a couple dozen teams have access to early participation.
+            </p>
+            <p class="pink">
+              They become large token holders, <br/>whales and validators.
+            </p>
+          </div>
+          <div>
+            <p class="white">
+              Is this decentralization?
+            </p>
+            <p class="yellow">
+              Will we be able to achieve mass adoption this way?
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="opportunities">
+        <div class="container">
+          <div>
+            <h3>/ Lucidnode gives every crypto enthusiast the opportunity to take part in building the future of Web3.</h3>
+          </div>
+          <div>
+            <p>
+              Your skills don't matter. The whole world cannot be made up entirely of programmers.
+              But all the world deserves a chance to take part in building our future together.
+            </p>
+          </div>
+          <div>
+            <h2>
+              / Only together<br /> we can make it come true.
+            </h2>
           </div>
         </div>
       </section>

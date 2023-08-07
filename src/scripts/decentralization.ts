@@ -12,19 +12,18 @@ const handleMouseMove = (e: MouseEvent) => {
   });
 };
 
-export default () => {
+export default (state) => {
+  state.currentSlide = 2;
+  state.isAnimated = true;
+
   const tl = gsap.timeline();
 
-  tl.set("#decentralization", { display: "block" });
-  tl.set("#decentralization .header-logo", { opacity: 0 });
-  tl.set("#decentralization .header-logo-text path", { opacity: 0 });
-  tl.set("#decentralization .icons", { transform: "scale(0)" });
+  tl.to("#decentralization", { opacity: 1, duration: 0.2 }, "-=1");
 
   tl.to("#decentralization .header-logo", {
     opacity: 1,
-    duration: 0.6,
+    duration: 0.4,
     ease: "power1.out",
-    delay: 0.5,
   });
 
   tl.to("#decentralization .header-logo-text path", {
@@ -34,14 +33,18 @@ export default () => {
     stagger: 0.1,
   });
 
-  tl.from("#decentralization .text p", {
-    y: 300,
-    ease: "power4.out",
-    stagger: {
-      amount: 0.3,
-    },
-    duration: 1.9,
-  });
+  tl.fromTo(
+    "#decentralization .text p",
+    { y: "100vh" },
+    {
+      y: 0,
+      ease: "power4.out",
+      stagger: {
+        amount: 0.3,
+      },
+      duration: 1.9,
+    }
+  );
 
   tl.to(
     "#decentralization .icons",
@@ -54,9 +57,8 @@ export default () => {
       ease: "power1",
       duration: 1,
       onComplete: () => {
-        document
-          .querySelector("#decentralization")
-          .addEventListener("mousemove", handleMouseMove);
+        document.body.onmousemove = handleMouseMove;
+        state.isAnimated = false;
       },
     },
     "-=1"
