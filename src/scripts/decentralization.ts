@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+import { TState } from "./utils";
 
 const handleMouseMove = (e: MouseEvent) => {
   gsap.to("#decentralization .icons", {
@@ -12,7 +13,7 @@ const handleMouseMove = (e: MouseEvent) => {
   });
 };
 
-export default (state) => {
+export default (state: TState) => {
   state.currentSlide = 2;
   state.isAnimated = true;
 

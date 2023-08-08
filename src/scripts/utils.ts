@@ -1,9 +1,12 @@
 const setRandomNumber = (min: number, max: number) =>
   Math.random() * (max - min) + min;
 
-const setUniqRandomNumber = <T>(min: number, max: number, used: Set<T>) => {
+const setUniqRandomNumber = (
+  min: number,
+  max: number,
+  used: Set<number>
+): number => {
   const random = Math.ceil(Math.random() * (max - min) + min);
-  console.log(used.has(random));
   if (used.has(random)) return setUniqRandomNumber(min, max, used);
 
   used.add(random);
@@ -11,3 +14,9 @@ const setUniqRandomNumber = <T>(min: number, max: number, used: Set<T>) => {
 };
 
 export { setRandomNumber, setUniqRandomNumber };
+
+export type TState = {
+  isAnimated: boolean;
+  currentSlide: number;
+  shown: Record<string, boolean>;
+};

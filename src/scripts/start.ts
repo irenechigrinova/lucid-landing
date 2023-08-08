@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
+import { TState } from "./utils";
 
-export default (state) => {
+export default (state: TState) => {
   state.isAnimated = true;
   state.currentSlide = 1;
 
@@ -132,14 +133,16 @@ export default (state) => {
     ease: "power1.in",
     delay: -3.5,
     onComplete: () => {
-      document.querySelector("#center").style.transformBox = "fill-box";
+      const center = document.querySelector("#center") as SVGGElement;
+      const lines = document.querySelector("#center .lines") as SVGPathElement;
+
+      center.style.transformBox = "fill-box";
       setTimeout(() => {
-        document.querySelector("#center").style.transformOrigin = "35% 63%";
-        document.querySelector("#center").style.transition = "transform 600ms";
-        document.querySelector("#center .lines").style.transition =
-          "opacity 400ms";
-        document.querySelector("#center .lines").style.opacity = "0";
-        document.querySelector("#center").style.transform = `scale(${
+        center.style.transformOrigin = "35% 63%";
+        center.style.transition = "transform 600ms";
+        lines.style.transition = "opacity 400ms";
+        lines.style.opacity = "0";
+        center.style.transform = `scale(${
           window.innerWidth < 612 || window.innerWidth > 2008 ? "26" : "15"
         })`;
       }, 1000);
